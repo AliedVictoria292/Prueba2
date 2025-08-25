@@ -1,0 +1,51 @@
+/* Estilo para pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    .menuCSS3 ul {
+        flex-direction: column; /* Cambia la dirección del menú a columna */
+    }
+
+    .menuCSS3 ul li {
+        width: 100%; /* Asegura que cada elemento ocupe el 100% del ancho */
+    }
+
+    .menuCSS3 a {
+        padding: 1em; /* Mantiene el tamaño adecuado */
+        text-align: center; /* Centra el texto en los elementos del menú */
+    }
+
+    /* Hacer que el submenú sea más accesible en móviles */
+    .menuCSS3 ul li ul {
+        position: static; /* Cambia la posición para que el submenú se muestre debajo del elemento principal */
+        display: none;
+    }
+
+    .menuCSS3 ul li:hover ul {
+        display: block; /* Muestra el submenú al hacer hover en móviles */
+    }
+
+    /* Botón para abrir/cerrar el menú en móviles */
+    .menuCSS3 .menu-toggle {
+        display: block;
+        padding: 1em;
+        background-color: #F9B53C;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    /* Ocultar los submenús en pantallas más pequeñas */
+    .menuCSS3 ul li ul {
+        display: none;
+    }
+
+    .menuCSS3 ul li.active ul {
+        display: block;
+    }
+}
+
+/* Estilo para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    .menuCSS3 ul li a {
+        font-size: 14px; /* Reduce el tamaño de la fuente para dispositivos muy pequeños */
+    }
+}
